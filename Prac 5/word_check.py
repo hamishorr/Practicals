@@ -7,12 +7,11 @@ for word in word_list:
         word_dict[word] += 1
     else:
         word_dict[word] = 1
-length = 0
-for key in word_dict:
-    if len(key) > length:
-        longest_length = len(key)
-    length = len(key)
 
+max_length = 0
+for key in word_dict:
+    if len(key) > max_length:
+        max_length = len(key)
 
 for key in word_list:
-    print("{:{}} : '{}' ".format(key, length+1, word_dict[key]))
+    print("{:{}} : '{}' ".format(key, max_length + 1, word_dict[key]))
