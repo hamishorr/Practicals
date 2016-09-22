@@ -1,4 +1,4 @@
-from programminglanguage import ProgrammingLanguage
+from Prac07.programminglanguage import ProgrammingLanguage
 
 ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
 python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
@@ -6,8 +6,8 @@ vb = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
 
 languages = [ruby,python,vb]
 
-for i in range(len(languages)):
-    if languages[i].is_dynamic():
-        print("{} is dynamic".format(languages[i].name))
+for language in languages:
+    if language.is_dynamic():
+        print("{} is dynamic".format(language.name))
     else:
-        print("{} is not dynamic".format(languages[i].name))
+        print("{} is not dynamic".format(language.name))
